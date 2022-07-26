@@ -8,11 +8,10 @@ export const TextareaContainer = styled.div`
 export const TextareaComponent = styled.textarea`
   height: 100px;
   width: 100%;
-  box-sizing: border-box;
   padding: 6px;
-  margin: 0px;
   border: 1px solid
-    ${(props) => (props.className === "error" ? "#ff452b" : "#e5e5e5")};
+    ${(props) =>
+      props.className === "error" ? "#ff452b" : "var(--border-input)"};
   border-radius: 8px;
   transition: 0.3s ease-in-out;
   resize: none;
@@ -25,6 +24,5 @@ export const TextareaComponent = styled.textarea`
 export const MessageError = styled.p`
   font-size: 14px;
   color: var(--color-error-message);
-  margin: 0px;
   padding: 5px 0px 5px 0px;
 `;
