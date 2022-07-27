@@ -6,7 +6,6 @@ import { Icons, Toggle } from "./ThemeToggle.style";
 
 export const ThemeToggle = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
-  console.log("theme" + theme);
 
   return (
     <Toggle

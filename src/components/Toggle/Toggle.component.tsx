@@ -19,11 +19,11 @@ export const Toggle: FC<IToggle> = ({
   sliderColorBefore,
   sliderColorAfter,
 }) => {
-  const { isOpen, toggle } = useToggle();
+  const { isSelected, toggle } = useToggle();
 
   useEffect(() => {
-    clicked(isOpen);
-  }, [isOpen]);
+    clicked(isSelected);
+  }, [isSelected]);
 
   return (
     <Switch

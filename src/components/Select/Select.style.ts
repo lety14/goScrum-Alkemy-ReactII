@@ -8,6 +8,7 @@ export const InputContainer = styled.div`
 export const SelectComponent = styled.select`
   height: 35px;
   width: 100%;
+  color: var(--color-text);
   border: 1px solid
     ${(props) =>
       props.className === "error" ? "#ff452b" : "var(--border-input)"};
