@@ -11,6 +11,7 @@ import {
 import { TaskSection } from "./TaskSection/TaskSection.component";
 import { TasksFilter } from "./TaskFilter/TasksFilter.component";
 import ThemeToggle from "../../components/ThemeToggle";
+import withTransition from "../../HOC/withTransition";
 
 const Tasks = () => {
   return (
@@ -31,4 +32,5 @@ const Tasks = () => {
   );
 };
 
-export default withAuth(Tasks);
+const firstHOC = withAuth(Tasks);
+export default withTransition(firstHOC);

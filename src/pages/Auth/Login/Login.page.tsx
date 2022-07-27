@@ -18,6 +18,7 @@ import { useEffect } from "react";
 import { SwalModal } from "./utils/SwalModal";
 
 import { validationSchema } from "./utils/ValidationSchema";
+import withTransition from "../../../HOC/withTransition";
 
 interface LocationState {
   fromRegistration: boolean;
@@ -89,4 +90,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default withTransition(Login);

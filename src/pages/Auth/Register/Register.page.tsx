@@ -23,9 +23,10 @@ import Toggle from "../../../components/Toggle";
 import { v4 as uuidv4 } from "uuid";
 import { validationSchema } from "./utils/ValidationSchema";
 import ThemeToggle from "../../../components/ThemeToggle";
+import withTransition from "../../../HOC/withTransition";
 // const { REACT_APP_API_ENDPOINT } = process.env;
 
-export const Register = () => {
+const Register = () => {
   const [hasTeam, setHasTeam] = useState<boolean>(false);
   const [teamIDvalue, setTeamIDvalue] = useState<string>("");
 
@@ -169,3 +170,5 @@ export const Register = () => {
     </Container>
   );
 };
+
+export default withTransition(Register);

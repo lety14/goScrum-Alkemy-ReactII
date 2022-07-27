@@ -10,21 +10,26 @@ export const TaskContainer = styled.main`
 `;
 
 export const Container = styled.section`
-  padding: 15px;
+  padding: 30px 15px;
   min-height: 100%;
   position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 40px;
+
   @media (min-width: 1250px) {
     display: grid;
+    gap: 20px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(85vh, 100%);
+    grid-template-rows: minmax(80vh, 100%);
   }
 `;
 
 export const ThemeToggleContainer = styled.div`
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 15px;
-  transform: scale(0.9);
+  transform: scale(0.85);
 `;
 
 export const SectionTasks = styled.section`
