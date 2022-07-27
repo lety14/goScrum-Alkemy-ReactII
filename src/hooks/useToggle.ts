@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 type UseToggleType = {
-  isOpen: boolean;
+  isSelected: boolean;
   toggle: () => void;
 };
 
@@ -10,7 +10,7 @@ const useToggle = (initialValue = false): UseToggleType => {
 
   const toggle = () => setValue((value) => !value);
 
-  return { isOpen: value, toggle };
+  return { isSelected: value, toggle };
 };
 
 export default useToggle;
