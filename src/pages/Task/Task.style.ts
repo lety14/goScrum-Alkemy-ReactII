@@ -34,10 +34,11 @@ export const ThemeToggleContainer = styled.div`
 
 export const SectionTasks = styled.section`
   background: var(--bg-section-tasks);
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 12px;
   margin-top: 20px;
   height: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @media (min-width: 1250px) {
     section {
       border-radius: 20px;
