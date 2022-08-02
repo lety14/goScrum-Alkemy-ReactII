@@ -6,11 +6,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { ILoginUser } from "../../types/userLogin.type";
 import { IRegistrationUser } from "../../types/userRegister.type";
 
-// const { REACT_APP_API_ENDPOINT: API_ENDPOINT } = process.env;
-const API_ENDPOINT = "https://goscrum-api.alkemy.org/";
-/**
- * TODO CAMBIAR API
- */
+const { REACT_APP_API_ENDPOINT: API_ENDPOINT } = process.env;
 
 type LoginProps = {
   result: {

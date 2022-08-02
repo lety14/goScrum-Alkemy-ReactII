@@ -7,7 +7,7 @@ export const initialValues: IRegistrationUser = {
   teamID: "",
   role: "",
   continent: "",
-  region: "",
+  region: "Otro",
 };
 
 export const errorMessage: Record<string, string> = {
