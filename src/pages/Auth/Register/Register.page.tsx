@@ -3,7 +3,7 @@ import { Input } from "../../../components/Input";
 import { initialValues } from "./constants";
 import { Button } from "../../../components/Button";
 import { Select } from "../../../components/Select";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   Title,
@@ -24,7 +24,6 @@ import { v4 as uuidv4 } from "uuid";
 import { validationSchema } from "./utils/ValidationSchema";
 import ThemeToggle from "../../../components/ThemeToggle";
 import withTransition from "../../../HOC/withTransition";
-// const { REACT_APP_API_ENDPOINT } = process.env;
 
 const Register = () => {
   const [hasTeam, setHasTeam] = useState<boolean>(false);
@@ -40,7 +39,7 @@ const Register = () => {
   const { data } = useGetAuthDataQuery({});
 
   const onSubmit = async () => {
-    const teamID = !teamIDvalue ? uuidv4() : values.teamID;
+    const teamID = !teamIDvalue ? uuidv4() : teamIDvalue;
     try {
       await postRegistrationUser({ values, teamID }).unwrap();
       resetForm();
@@ -113,12 +112,11 @@ const Register = () => {
         </ToggleContainer>
         {!hasTeam && (
           <Input
-            label="Introduce el identificador de equipo"
+            label="Introduce el identificador de equipo (UUID code)"
             name="teamID"
             onChange={(e) => {
               setTeamIDvalue(e.target.value);
             }}
-            // onBlur={handleBlur}
             value={teamIDvalue}
           />
         )}
