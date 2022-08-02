@@ -1,14 +1,13 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
-import Error404 from "./pages/PageNotFound/Error404.page";
+import { AnimatePresence } from "framer-motion";
 import { Login } from "./pages/Auth/Login";
 import { Register } from "./pages/Auth/Register";
-import Tasks from "./pages/Task/Tasks.page";
-import { GlobalStyle } from "./App.style";
+import { Tasks } from "./pages/Task";
 import { store } from "./store/store";
 import { Provider } from "react-redux";
-import ThemeProvider, { ThemeContext } from "./context/themeProvider.context";
-import { useContext } from "react";
+import { ThemeContext } from "./context/themeProvider.context";
+import { lazy, Suspense, useContext } from "react";
+const Error404 = lazy(() => import("./pages/PageNotFound/Error404.page"));
 
 export const App = () => {
   const location = useLocation();
@@ -22,7 +21,14 @@ export const App = () => {
             <Route path="/" element={<Tasks />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="*" element={<Error404 />} />
+            <Route
+              path="*"
+              element={
+                <Suspense fallback={<>...</>}>
+                  <Error404 />
+                </Suspense>
+              }
+            />
           </Routes>
         </AnimatePresence>
       </div>

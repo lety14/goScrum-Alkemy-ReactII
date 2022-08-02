@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./App";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { GlobalStyle } from "./App.style";
 import ThemeProvider from "./context/themeProvider.context";
 
@@ -12,9 +12,9 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     <ThemeProvider>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   </React.StrictMode>
 );
