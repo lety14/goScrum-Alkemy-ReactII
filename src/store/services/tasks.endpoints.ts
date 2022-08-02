@@ -1,15 +1,6 @@
 import { ITask } from "../../types/tasks.type";
-
-// import http from "../http-common";
-// const axios = require("axios").default;
 import axios, { AxiosResponse } from "axios";
-// const { REACT_APP_API_ENDPOINT: API_ENDPOINT } = process.env;
-const API_ENDPOINT = "https://goscrum-api.alkemy.org/";
-
-/**
- * TODO cambiar
- *
- */
+const { REACT_APP_API_ENDPOINT: API_ENDPOINT } = process.env;
 
 interface taskResponse {
   result: { task: ITask };
@@ -59,6 +50,7 @@ const updateTask = async (task: ITask) => {
       return {
         _id: task._id,
         title: task.title,
+        createdAt: task.createdAt,
         importance: task.importance,
         status: statusArray[newStatusIndex],
         description: task.description,
