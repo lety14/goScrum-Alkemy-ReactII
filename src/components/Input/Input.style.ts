@@ -22,6 +22,11 @@ export const InputComponent = styled.input`
     outline: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
   &::placeholder {
     color: var(--text-color);
   }

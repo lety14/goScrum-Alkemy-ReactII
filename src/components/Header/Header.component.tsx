@@ -31,7 +31,10 @@ export const Header = () => {
       <img src={`${logo}`} alt="Logo" />
       <HeaderBox>
         <Donate />
-        <TasksCounter>Tareas: {!tasks ? 0 : tasks.length}</TasksCounter>
+        <TasksCounter data-testid="tasks-counter">
+          Tareas:
+          <span>{!tasks ? 0 : tasks.length}</span>
+        </TasksCounter>
         <div>
           <UserName>{localStorage.getItem("userName")}</UserName>
           <span onClick={handleLogout}>

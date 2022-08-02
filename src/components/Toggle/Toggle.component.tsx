@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import { FC, useEffect } from "react";
 import useToggle from "../../hooks/useToggle";
 import { Slider, Switch, Input } from "./Toggle.style";
 

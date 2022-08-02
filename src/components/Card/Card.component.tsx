@@ -28,7 +28,6 @@ export const Card: FC<CardProps> = ({
 
   const datetime =
     (createdAt ? new Date(createdAt).toLocaleString() : 0) + " hs.";
-  // user: { userName }
   return (
     <CardContainer>
       <Close
@@ -38,7 +37,6 @@ export const Card: FC<CardProps> = ({
       </Close>
       <Title>{title}</Title>
       <DateTime>{datetime}</DateTime>
-      {/* <UserName>{userName}</UserName> */}
       <ButtonContainer>
         <Button
           className={status.toLowerCase()}

@@ -48,6 +48,7 @@ export const Input: FC<InputProps> = ({
           onChange={onChange}
           value={value}
           onBlur={onBlur}
+          data-testid={`input-${name}`}
           className={error && touched ? "error" : ""}
         />
         {type === "password" && (

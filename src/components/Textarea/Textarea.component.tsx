@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, FocusEvent } from "react";
+import { ChangeEvent, FC, FocusEvent } from "react";
 import {
   MessageError,
   TextareaComponent,
@@ -32,6 +32,7 @@ export const Textarea: FC<TextareaProps> = ({
         onChange={onChange}
         value={value}
         onBlur={onBlur}
+        data-testid={`textarea-${name}`}
         className={error && touched ? "error" : ""}
       />
       {error && touched && <MessageError>{error}</MessageError>}

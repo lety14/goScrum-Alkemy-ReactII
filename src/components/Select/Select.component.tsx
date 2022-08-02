@@ -33,12 +33,17 @@ export const Select: FC<SelectProps> = ({
         value={value}
         className={error && touched ? "error" : ""}
         onBlur={onBlur}
+        data-testid={`select-${name}`}
       >
         <option value="" defaultChecked={true}>
           {firstValue}
         </option>
         {options?.map((option, index) => (
-          <option value={option} key={`${index}_${option}`}>
+          <option
+            value={option}
+            key={`${index}_${option}`}
+            data-testid={`option-${name}-${option}`}
+          >
             {option}
           </option>
         ))}
