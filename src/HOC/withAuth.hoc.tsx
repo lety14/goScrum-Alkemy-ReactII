@@ -1,4 +1,4 @@
-import { ComponentType, FC, ReactComponentElement, ReactElement } from "react";
+import { ComponentType } from "react";
 import { Navigate } from "react-router-dom";
 
 type WithAuthProps = {
