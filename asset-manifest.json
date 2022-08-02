@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/goScrum-Alkemy-ReactII/static/css/main.039bf95e.css",
+    "main.js": "/goScrum-Alkemy-ReactII/static/js/main.49a48ac2.js",
+    "static/js/876.154a5089.chunk.js": "/goScrum-Alkemy-ReactII/static/js/876.154a5089.chunk.js",
+    "static/media/pageNotFound.gif": "/goScrum-Alkemy-ReactII/static/media/pageNotFound.24459f505124a66153f7.gif",
+    "index.html": "/goScrum-Alkemy-ReactII/index.html",
+    "main.039bf95e.css.map": "/goScrum-Alkemy-ReactII/static/css/main.039bf95e.css.map",
+    "main.49a48ac2.js.map": "/goScrum-Alkemy-ReactII/static/js/main.49a48ac2.js.map",
+    "876.154a5089.chunk.js.map": "/goScrum-Alkemy-ReactII/static/js/876.154a5089.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.039bf95e.css",
+    "static/js/main.49a48ac2.js"
+  ]
+}
